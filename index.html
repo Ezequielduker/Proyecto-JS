@@ -28,10 +28,10 @@
 
         <h1 class="titulo--marca">Tecnocel</h1>
 
-        <nav class="navbar bg-light d-none d-md-inline-block">
+        <nav class="navbar bg-light  d-md-inline-block">
             <div class="container-fluid">
                 <form class="d-flex" role="Buscar">
-                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                    <input class="form-control me-2" id="formulario" type="search" placeholder="Ingrese el producto que desea ver" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Buscar</button>
                 </form>
             </div>
@@ -73,13 +73,12 @@
 
    
     <main class="main">
-<div  class="container--tarjetas" >
+<div  class="container--tarjetas" id="resultado">
         <div>
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 18rem;" id="resultado">
                 <img src="./imagenes/img1--tarjeta.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
+                    <p class="card-text">Nombre: celular</p>
                     <div class="button--container">
                         <button class="button">AGREGAR</button>
                     </div>
@@ -92,8 +91,7 @@
             <div class="card" style="width: 18rem;">
                 <img src="./imagenes/img2--tarjeta.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
+                    <p class="card-text">Nombre: tablet.</p>
                     <div class="button--container">
                         <button class="button">AGREGAR</button>
                     </div>
@@ -149,6 +147,7 @@
     </footer>
 
 <script src="main.js"></script>
+<script src="search.js"></script>
 </body>
 
 </html>

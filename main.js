@@ -1,69 +1,101 @@
+const productos = [
+    { nombre: "celular", precio: 100 },
+    { nombre: "tablet", precio: 200 },
+    { nombre: "termo", precio: 50 },
+    { nombre: "notebook", precio: 250 },
+    { nombre: "funda", precio: 150 },
+];
 
+let carrito = []
 
-//  Para mi trabajo final deseo realizar una maqueta tipo E-commerce 
-//  para ello, necesitare que la persona ingrese un usuario y contraseña para
-//  poder operar.
+let seleccion = prompt("¿ Hola desea comprar algun producto ? Responda si o no")
 
-      //  1) crear un algoritmo con un condicional, Ejemplo 1:
-
-
-// const usuarioAutorizado = "ezequiel";
-// const passwordAutorizado = "silva";
-
-// let usuarioIngresado = prompt("Ingrese su nombre de usuario: "); 
-// let passwordIngresado = prompt("Ingrese su contraseña: "); 
-
-
-// for(let i = 0; i < 2; i++) {
-//     if(usuarioIngresado === usuarioAutorizado && passwordIngresado === passwordAutorizado) {
-//         alert("contraseña correcta, Bienvenido!");
-//         break;
-        
-//     }else {
-//          alert("contraseña o usuario incorrecto, volvé a intentarlo");
-//          break;
-            
-//      } 
-//     }
-
-
-       // Ejemplo 2 :
-
-// siguiendo con la tematica de mi proyecto final, la persona podrá tener la opcion 
-// de calcular el " costo de envío por zona" para ello crearé una funcion
-// que la pueda utilizar cada vez que se requiera: 
-
-function calcularCostoDeEnvio() {
-
-    let localidad = prompt("Ingrese su localidad: \n 1: CABA, 2: Zona Sur, 3: Zona Norte");
-
-//    El while es a modo de prueba, se puede utilizar si se quiere.
-
-// while(localidad != "1" && localidad != "2" && localidad != "3" ) {
-//     localidad = prompt("Ingrese su localidad: \n 1: CABA, 2: Zona Sur, 3: Zona Norte");
-// }
-
-switch(localidad) {
-    case "1":
-        alert("el costo de envio es 200$");
-        break;
-        case "2":
-        alert("el costo de envio es 500$");
-        break;
-        case "3":
-        alert("el costo de envio es 600$");
-        break;
-        default:
-            alert("No tenemos alcance hasta esa localidad");
-            break;
-        
-} 
-
+while (seleccion != "si" && seleccion != "no") {
+    alert("Por favor Ingresa si o no")
+    seleccion = prompt("Hola desea comprar, Responda  si o no")
 }
 
-// calcularCostoDeEnvio();
+if (seleccion == "si") {
+    alert("A continuación nuestra lista de productos, elegí algunas de las opciones: ")
+    let todosLosProductos = productos.map((producto) => producto.nombre + "" + producto.precio + "$")
+    alert(todosLosProductos.join())
+} else if (seleccion == "no") {
+    alert("Muchas Gracias, Nos vemos luego! ")
+}
 
+// para elegir productos.
 
+while (seleccion != "no") {
+    let producto = prompt("Agregá un producto a tu carrito")
+    let precio = 0
+
+    if (producto == "celular" || producto == "tablet" || producto == "termo" || producto == "notebook" ||
+        producto == "funda") {
+        switch (producto) {
+            case "celular":
+                precio = 100;
+                break;
+
+            case "tablet":
+                precio = 200;
+                break;
+
+            case "termo":
+                precio = 50;
+                break;
+
+            case "notebook":
+                precio = 250;
+                break;
+            case "funda":
+                precio = 200;
+                break;
+            default:
+                break;
+        }
+
+        let unidades = parseInt(prompt("cuantas unidades quiere llevar"))
+
+        carrito.push({ producto, unidades, precio })
+        console.log(carrito)
+    } else {
+        alert("¡No tenemos ese producto!")
+    }
+
+    seleccion = prompt("¿ Desea seguir comprando ?")
+    while (seleccion === "no") {
+        alert("¡Gracias por la compra!")
+        carrito.forEach((carritoFinal) => {
+            console.log(`producto: ${carritoFinal.producto}, unidades: ${carritoFinal.unidades},
+            total a pagar por producto ${carritoFinal.unidades * carritoFinal.precio}`)
+        })
+        break;
+    }
+}
+// suma el valor total de los productos elegidos.
+const total = carrito.reduce((acc, el) => acc + el.precio * el.unidades, 0)
+console.log(`el total a pagar por su compra es: ${total}`);
+
+// BUSCADOR.
+
+const producto = document.getElementById("resultado");
+
+const catalogo = () => {
+    for (let producto of productos) {
+        producto.innerHTML += `
+                
+
+                <div class="card" style="width: 18rem;" id="resultado">
+                <img src="./imagenes/img1--tarjeta.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">Nombre: ${producto.nombre}</h5>
+                    <p class="card-text">Valor: ${producto.precio}</p>
+                    </div>
+
+                                       
+        `
+    }
+}
 
 
 
