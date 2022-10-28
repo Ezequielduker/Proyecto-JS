@@ -21,7 +21,9 @@ const filtrar = () =>{
                     <p class="card-text">Valor: ${producto.precio}</p>
                     </div>
 
-                                        
+                    <div class="button--container">
+                    <button class="button">AGREGAR</button>
+                </div>                  
             `
         }
 

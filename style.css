@@ -17,6 +17,14 @@
     height: 100px;
 }
 
+.imgcarrito {
+    width: 2rem;
+    height: 2rem;
+}
+li {
+    list-style-type: none;
+}
+
 /* MAIN */
 
 .container--tarjetas {
