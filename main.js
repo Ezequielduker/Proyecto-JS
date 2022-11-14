@@ -56,13 +56,13 @@ stockProductos.forEach((prod) => {
   const { id, nombre, precio, desc, img, cantidad } = prod;
   if (contenedor) {
     contenedor.innerHTML += `
-      <div class="card text-center border-dark  mt-3" style="width: 18rem;">
+      <div class="card text-center shadow p-3 mb-5 bg-body rounded" style="width: 18rem;">
       <img class="card-img-top mt-2" src="${img}" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">${nombre}</h5>
         <p class="card-text">Precio: ${precio}</p>
         <p class="card-text">Cantidad: ${cantidad}</p>
-        <button class="btn btn-outline-success" onclick="agregarProducto(${id})">Comprar Producto</button>
+        <button class="btn btn-outline-success " onclick="agregarProducto(${id})">Comprar Producto</button>
       </div>
     </div>
       `;
@@ -210,7 +210,7 @@ fetch(listadoProductos)
   .then(datos => {
     datos.forEach(producto => {
       listado.innerHTML += `
-    <div class="card text-center border-dark mt-3" style="width: 18rem; ">
+    <div class="card text-center shadow p-3 mb-5 bg-body rounded" style="width: 18rem; ">
     <img class="card-img-top mt-2" src="${producto.img}" alt="Card image cap"/>
     <div class="card-body">
     <h5> ${producto.nombre} </h5>
