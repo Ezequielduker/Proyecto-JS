@@ -1,0 +1,41 @@
+.row {
+    display: flex;
+    margin-top: 50px;
+    align-items: center;
+    justify-content: space-evenly;
+    /* flex-wrap: wrap; */
+}
+
+/* html carrito */
+.modal-contenedor {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.img-carrito {
+    width: 200px;
+    padding: 20px;
+}
+
+.parrafo {
+    font-weight: 700;
+    font-style: italic;
+}
+
+.boton {
+    opacity: 0;
+}
+
+/* Footer */
+
+.footer {
+    height: 500%;
+    margin-top: 100px;
+    color: black;
+}
+
+.texto--footer {
+    text-align: center;
+}
+

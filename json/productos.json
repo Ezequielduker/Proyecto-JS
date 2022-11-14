@@ -1,6 +1,5 @@
 [
-    {"nombre":"samsung", "precio":200, "cantidad":1, "id":1, "img":"imagenes/img1--tarjeta.jpg"},
-    {"nombre":"iphone", "precio":100, "cantidad":1, "id":2, "img":"imagenes/img2--tarjeta.jpg"},
-    {"nombre":"motorola", "precio":250,"cantidad":1,"id":3, "img":"imagenes/img3--tarjeta.jpg"}
-
+    {"nombre":"Samsung", "precio":400, "cantidad":1, "id":1, "img":"imagenes/img1--tarjeta.jpg"},
+    {"nombre":"Iphone", "precio":100, "cantidad":1, "id":2, "img":"imagenes/img2--tarjeta.jpg"},
+    {"nombre":"Motorola", "precio":250,"cantidad":1,"id":3, "img":"imagenes/img3--tarjeta.jpg"}
 ]
