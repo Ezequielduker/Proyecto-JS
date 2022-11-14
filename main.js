@@ -1,4 +1,3 @@
-
 const stockProductos = [
   {
     id: 1,
@@ -24,7 +23,6 @@ const stockProductos = [
     img: "imagenes/img3--tarjeta.jpg"
   },
 ];
-
 // declaro una C con el carrito, arranca vacio
 
 let carrito = [];
@@ -196,7 +194,7 @@ function enviarPedido(e) {
 
   const alertExito = document.createElement('p')
   alertExito.classList.add('alert', 'alerta', 'd-block', 'text-center', 'col-md-12', 'mt-2', 'alert-success')
-  alertExito.textContent = 'Compra realizada correctamente'
+  alertExito.textContent = 'Compra realizada con exito!'
   formulario.appendChild(alertExito)
   setTimeout(() => {
     alertExito.remove()
