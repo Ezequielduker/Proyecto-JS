@@ -1,6 +1,4 @@
-
-
-.header {
+/* .header {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -10,10 +8,10 @@
 .iconos--header {
     display: flex;
     gap: 2rem;
-}
+} */
 
 
-.logo {
+/* .logo {
     height: 100px;
 }
 
@@ -23,31 +21,57 @@
 }
 li {
     list-style-type: none;
-}
+} */
 
 /* MAIN */
 
-.container--tarjetas {
+
+
+.icono{
+    justify-content: flex-end;
+}
+
+.row {
     display: flex;
     margin-top: 50px;
     align-items: center;
     justify-content: space-evenly;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 }
 
+/* html carrito */
+
+.modal-contenedor {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.img-carrito {
+    width: 200px;
+    padding: 20px;
+}
+
+.parrafo {
+    font-weight: 700;
+    font-style: italic;
+}
 
 
 /* botones agregar de tarjetas */
 
-.button--container {
+/* .button--container {
     text-align: center;
-}
+} */
 
-.button {
+/* .agregar-carrito {
     border-radius: 5px;
     text-decoration: none;
     color: green;
     background-color: white;
+} */
+.boton {
+    opacity: 0;
 }
 
 /* Footer */
@@ -55,20 +79,24 @@ li {
 .footer {
     height: 500%;
     margin-top: 100px;
-    background: rgb(189, 195, 199);
-    background: radial-gradient(circle, rgba(189, 195, 199, 1) 0%, rgba(68, 84, 99, 1) 98%);
+   
+    color: black;
 }
-
-h1 {
+.texto--footer{
     text-align: center;
 }
+
+
+/* Modal */
+
+
 
 /* para mobiles */
 
 @media screen and (max-width:760px) {
     .header {
         display: flex;
-       
+
     }
 
     .navbar-nav {
